@@ -1,0 +1,16 @@
+class Solution {
+    ArrayList<Integer> l=new ArrayList<>();
+    public void fnc(TreeNode root){
+        if(root==null){
+            return;
+            }
+        l.add(root.val);
+        fnc(root.left);
+        fnc(root.right);
+    }
+    public List<Integer> preorderTraversal(TreeNode root) {
+        fnc(root);
+        return l;
+
+    }
+}
