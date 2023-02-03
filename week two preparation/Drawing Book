@@ -1,0 +1,14 @@
+class Result {
+    public static int pageCount(int n, int p) {
+     int f=(p/2);
+     int b;
+     if(n%2==0){
+         b=(n-p+1)/2;
+     }
+     else{
+         b=(n-p)/2;
+     }
+     int result=Math.min(f,b);
+     return result;
+    }
+}
