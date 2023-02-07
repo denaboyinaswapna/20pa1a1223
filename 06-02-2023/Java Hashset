@@ -1,0 +1,17 @@
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
+        int t=scan.nextInt();
+        String[] pairleft=new String[t];
+        String[] pairright=new String[t];
+        for(int i=0;i<t;i++){
+            pairleft[i]=scan.next();
+            pairright[i]=scan.next();
+        }
+        HashSet<String> st=new HashSet<String>();
+        for(int i=0;i<t;i++){
+            st.add(pairleft[i]+" "+pairright[i]);
+            System.out.println(st.size());
+        }
+    }
+}
