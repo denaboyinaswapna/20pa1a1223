@@ -1,0 +1,24 @@
+
+class Result {
+    public static List<Integer> breakingRecords(List<Integer> scores) {
+        int count1=0;
+        int count2=0;
+        int n=scores.size();
+        ArrayList<Integer> ar1=new ArrayList<Integer>();
+        int max=scores.get(0);
+        int min=scores.get(0);
+        for(int i=1;i<n;i++){
+            if(scores.get(i) > max){
+                max=scores.get(i);
+                count1+=1;
+            }
+            if(scores.get(i) < min){
+                min=scores.get(i);
+                count2+=1;
+            }
+        }
+       ar1.add(count1);
+       ar1.add(count2);
+       return ar1;
+    }
+}
